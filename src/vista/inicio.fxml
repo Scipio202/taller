@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PantallaInicioControlador">
+   <children>
+      <Label prefHeight="18.0" prefWidth="49.0" text="Usuario:" />
+      <TextField fx:id="usuario_TxtField_pInicio" maxWidth="150.0" />
+      <Label text="Contraseña:">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Label>
+      <TextField fx:id="clave_TxtField_pInicio" maxWidth="150.0" />
+      <Button fx:id="aceptar_button_pInicio" mnemonicParsing="false" onAction="#handleaceptar_button_pInicioAction" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Aceptar">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+      <Label fx:id="errorLabel_pInicio" text="Usuario o contraseña incorrecto" textFill="#ef0202" visible="false">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="olvido_button_pInicio" mnemonicParsing="false" onAction="#handleolvido_button_pInicioAction" text="He olvidado la contraseña">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Button>
+      <Label fx:id="llama_instalador_Label_pInicio" text="Llame a la persona que le instaló el programa" textFill="RED" visible="false">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

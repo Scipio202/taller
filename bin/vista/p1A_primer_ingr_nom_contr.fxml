@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Pantalla1AControlador">
+   <children>
+      <Label text="Ingreso de nombre de Usuario, Contraseña y Preguntas de Seguridad">
+         <VBox.margin>
+            <Insets left="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label text="Usuario:">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="usuario_txtField_p1A" maxWidth="200.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="caractMn4_p1A" style="-fx-font-weight: bold;" text="¡Usario y contraseña, 4 caracteres mínimo!" textFill="#f20404" visible="false">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label text="Contraseña:">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="clave_txtField_p1A" maxWidth="200.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Usuario y Contraseña: 4 caracteres mínimo.">
+               <HBox.margin>
+                  <Insets left="14.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <Label style="-fx-font-weight: bold;" text="Preguntas de seguridad. Es importante que ponga preguntas que sólo sepa usted y no las olvide.">
+         <VBox.margin>
+            <Insets left="20.0" top="7.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Finalice la pregunta. Por ej. ¿El nombre de mi... padre?">
+         <VBox.margin>
+            <Insets left="20.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label text="¿El nombre de mi ...">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="preg1_txtField_p1A" maxWidth="435.0" prefHeight="26.0" prefWidth="435.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="?">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Label text="Responda a la pregunta anterior.">
+         <VBox.margin>
+            <Insets left="20.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="resp1_txtField_p1A" maxWidth="541.0" prefHeight="26.0" prefWidth="541.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Label prefHeight="18.0" prefWidth="420.0" text="Finalice la pregunta. Por ej. ¿El año... que me saqué el carnet de conducir?">
+         <VBox.margin>
+            <Insets left="20.0" top="15.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label text="¿El año ...">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="preg2_txtField_p1A" maxWidth="486.0" prefHeight="26.0" prefWidth="486.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="?">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Label text="Responda a la pregunta anterior.">
+         <VBox.margin>
+            <Insets left="20.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="resp2_txtField_p1A" maxWidth="541.0" prefHeight="26.0" prefWidth="541.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="guardar_button_p1A" mnemonicParsing="false" onAction="#handle_guardar_button_p1A_action" text="Guardar">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="noVacio_label_p1A" style="-fx-font-weight: bold;" text="¡No pueden quedar preguntas y respuestas vacías!" textFill="#f40606" visible="false">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="14.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="volverPant_Inic_button_p1A" mnemonicParsing="false" onAction="#handle_volverPant_Inic_button_p1A_action" text="Volver a Pantalla Inicio">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="error_guardBD_label_p1A" text="¡Error al guardar en la Base de Datos!" textFill="#fa0404" visible="false">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>
