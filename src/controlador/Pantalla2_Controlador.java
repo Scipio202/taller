@@ -154,7 +154,9 @@ public class Pantalla2_Controlador {
 	        // Guardar los datos en la base de datos utilizando el modelo
 	        pantalla2_modelo.guardarDatosVehiculo(matricula, color, marca, modelo, combustible, id_propietario);	           
 	       
+	        int id_vehiculo = pantalla2_modelo.obtenerIdVehiculo(matricula);
 	        
+	        pantalla2_modelo.guardarDatosReparacion(id_vehiculo);
 	    }
 
 	    @FXML

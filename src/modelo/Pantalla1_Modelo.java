@@ -46,7 +46,10 @@ public class Pantalla1_Modelo {
 
 		    try {
 		        connection = Conexion.obtenerConexion();
-		        String sql = "SELECT COUNT(*) AS count FROM datos_reparacion WHERE LOWER(matricula) = ? AND inicio_reparacion = TRUE";
+		        String sql = "SELECT COUNT(*) AS count " +
+	                     "FROM datos_reparacion dr " +
+	                     "INNER JOIN caract_vehiculo cv ON dr.id_vehiculo = cv.id_vehiculo " +
+	                     "WHERE LOWER(cv.matricula) = ? AND dr.inicio_reparacion = TRUE";
 		        statement = connection.prepareStatement(sql);
 		        statement.setString(1, matricula.toLowerCase());
 		        resultSet = statement.executeQuery();

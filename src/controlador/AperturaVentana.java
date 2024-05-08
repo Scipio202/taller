@@ -100,6 +100,21 @@ public class AperturaVentana {
             e.printStackTrace();
         }
     }
+    
+    public static void abrirVentanaObj(String rutaFXML, Object controlador) {
+        try {
+            FXMLLoader loader = new FXMLLoader(AperturaVentana.class.getResource(rutaFXML));
+            loader.setController(controlador);
+            VBox root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     // Métodos getter para acceder a las rutas de las vistas
    

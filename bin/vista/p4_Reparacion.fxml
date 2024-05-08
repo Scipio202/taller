@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #d2e9f8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Área de Reparación">
@@ -80,12 +79,12 @@
                   <Insets left="20.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="motivo_reparac_txtF_p4" prefWidth="300.0">
+            <TextField fx:id="motivo_reparac_txtF_p4" disable="true" prefWidth="300.0" promptText="Debe escribir un motivo">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="iniciar_reparac_button_p4" mnemonicParsing="false" text="Iniciar Reparación">
+            <Button fx:id="iniciar_reparac_button_p4" disable="true" mnemonicParsing="false" onAction="#boton_iniciar_reparac_button_p4Action" text="Iniciar Reparación">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
@@ -106,12 +105,12 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <TextArea fx:id="datos_reparac_txtA_p4" prefHeight="100.0" prefWidth="440.0" wrapText="true">
+            <TextArea fx:id="datos_reparac_txtA_p4" disable="true" prefHeight="100.0" prefWidth="440.0" wrapText="true">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
             </TextArea>
-            <Button fx:id="guardar_txtA_button_p4" mnemonicParsing="false" text="Guardar">
+            <Button fx:id="guardar_txtA_button_p4" disable="true" mnemonicParsing="false" onAction="#boton_guardar_txtA_button_p4Action" text="Guardar">
                <HBox.margin>
                   <Insets left="25.0" top="43.0" />
                </HBox.margin>
@@ -126,8 +125,8 @@
             <Insets top="25.0" />
          </VBox.margin>
          <children>
-            <Button fx:id="fin_reparac_button_p4" mnemonicParsing="false" text="Fin Reparación" />
-            <Button fx:id="volver_pant_gral_button_p4" mnemonicParsing="false" text="Volver a Pantalla General">
+            <Button fx:id="fin_reparac_button_p4" disable="true" mnemonicParsing="false" onAction="#boton_fin_reparac_button_p4Action" text="Fin Reparación" />
+            <Button fx:id="volver_pant_gral_button_p4" mnemonicParsing="false" onAction="#boton_pantGralAction" text="Volver a Pantalla General">
                <HBox.margin>
                   <Insets left="200.0" />
                </HBox.margin>

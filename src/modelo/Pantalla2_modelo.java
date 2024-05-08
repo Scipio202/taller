@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +60,47 @@ public class Pantalla2_modelo {
 	    }
 	    
 	    return id_Propietario;
+	}
+	
+	public void guardarDatosReparacion(int id_vehiculo) {
+	    try {
+	        // Obtener la fecha actual
+	        LocalDateTime fechaActual = LocalDateTime.now();
+	        
+	        // Convertir la fecha actual a formato compatible con MySQL (java.sql.Timestamp)
+	        Timestamp timestamp = Timestamp.valueOf(fechaActual);
+
+	        // Insertar los datos en la tabla datos_reparacion
+	        String query = "INSERT INTO datos_reparacion (motivo_visita, inicio_reparacion, fin_reparacion, fecha_inicio_repar, fecha_fin_repar, id_vehiculo) VALUES (?, ?, ?, ?, ?, ?)";
+	        PreparedStatement statement = conexion.prepareStatement(query);
+	        statement.setString(1, "Apertura ficha");
+	        statement.setBoolean(2, false);
+	        statement.setBoolean(3, true);
+	        statement.setTimestamp(4, timestamp);
+	        statement.setTimestamp(5, timestamp);
+	        statement.setInt(6, id_vehiculo);
+	        statement.executeUpdate();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	public int obtenerIdVehiculo(String matricula) {
+	    int idVehiculo = -1; // Valor por defecto en caso de error
+
+	    try {
+	        String query = "SELECT id_vehiculo FROM caract_vehiculo WHERE matricula = ?";
+	        PreparedStatement statement = conexion.prepareStatement(query);
+	        statement.setString(1, matricula);
+	        ResultSet resultSet = statement.executeQuery();
+	        if (resultSet.next()) {
+	            idVehiculo = resultSet.getInt("id_vehiculo");
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return idVehiculo;
 	}
 
 	

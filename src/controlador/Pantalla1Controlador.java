@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import modelo.Pantalla1_Modelo;
 
+
 public class Pantalla1Controlador {
 
 	  @FXML
@@ -29,7 +30,9 @@ public class Pantalla1Controlador {
 	    @FXML
 	    private Label intr_matr_label_p1;
 
-	    private Pantalla1_Modelo pantalla1_modelo = new Pantalla1_Modelo();
+	    private Pantalla1_Modelo pantalla1_modelo = new Pantalla1_Modelo();	   	    
+	    
+	    String matriculaP4 = "";
 
 	    @FXML
 	    private void initialize() {
@@ -40,7 +43,8 @@ public class Pantalla1Controlador {
 	    @FXML
 	    public void handleComprobarButtonAction() {
 	        String matricula = ingr_matric_txtField_p1.getText().toLowerCase(); // Convertir a minúsculas
-
+	        matriculaP4 = matricula;
+	       
 	        // Validar que se haya ingresado una matrícula
 	        if (matricula.isEmpty()) {
 	            // Mostrar el mensaje de error
@@ -71,11 +75,27 @@ public class Pantalla1Controlador {
 	        }
 	    }
 	    
+	   
+	    
 	    public void handlerNuevaReparAction() {
+	    	 
+	    	String matricula = ingr_matric_txtField_p1.getText().toLowerCase();
+	    	 Pantalla4_Controlador pantalla4Controlador = new Pantalla4_Controlador(matricula, true);
+	         AperturaVentana.abrirVentanaObj(AperturaVentana.getRutaPantallaP4(), pantalla4Controlador);
 	    	
+	    	cerrarPantallaActual();
 	    }
 	    
 	    public void handlerContReparAction() {
+	    	
+	    	String matricula = ingr_matric_txtField_p1.getText().toLowerCase();
+	    	 Pantalla4_Controlador pantalla4Controlador = new Pantalla4_Controlador(matricula, false);
+	         AperturaVentana.abrirVentanaObj(AperturaVentana.getRutaPantallaP4(), pantalla4Controlador);
+	    	
+	    	cerrarPantallaActual();
+	    }
+	    
+	    public void handlerHistorialAction() {
 	    	
 	    }
 
