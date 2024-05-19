@@ -46,7 +46,7 @@ public class Pantalla4_Controlador {
    // Enlace_p1_p4 enlace = new Enlace_p1_p4();
     private String matricula;
     private boolean iniciarReparacion;
-    private String textoDatos;
+    private String textoDatos = "a";
     Pantalla4_Modelo p4_modelo = new Pantalla4_Modelo();
     
     public Pantalla4_Controlador(String matricula, boolean iniciarReparacion) {

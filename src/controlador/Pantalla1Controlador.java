@@ -77,7 +77,7 @@ public class Pantalla1Controlador {
 	    
 	   
 	    
-	    public void handlerNuevaReparAction() {
+	    public void handlerNuevaReparAction() { // Botón Nueva Reparación
 	    	 
 	    	String matricula = ingr_matric_txtField_p1.getText().toLowerCase();
 	    	 Pantalla4_Controlador pantalla4Controlador = new Pantalla4_Controlador(matricula, true);
@@ -86,7 +86,7 @@ public class Pantalla1Controlador {
 	    	cerrarPantallaActual();
 	    }
 	    
-	    public void handlerContReparAction() {
+	    public void handlerContReparAction() { // Botón Continuar Reparación 
 	    	
 	    	String matricula = ingr_matric_txtField_p1.getText().toLowerCase();
 	    	 Pantalla4_Controlador pantalla4Controlador = new Pantalla4_Controlador(matricula, false);
@@ -95,8 +95,11 @@ public class Pantalla1Controlador {
 	    	cerrarPantallaActual();
 	    }
 	    
-	    public void handlerHistorialAction() {
+	    public void handlerHistorialAction() { // Botón Acceso a Consultas
+	    		    	 
+	         AperturaVentana.abrirVentana(AperturaVentana.getRutaPantallaP5());;
 	    	
+	    	cerrarPantallaActual();
 	    }
 
 	    private void cerrarPantallaActual() {

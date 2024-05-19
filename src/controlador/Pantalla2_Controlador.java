@@ -108,11 +108,9 @@ public class Pantalla2_Controlador {
 	            abrirPantallaP1();
 	            pantalla2_modelo.cerrarConexion();
 	            cerrarVentana();
-	        }
-	    	
-	    	
+	        }	    	
 	        
-	        }
+	      }
 	    
 	    	    
 	   

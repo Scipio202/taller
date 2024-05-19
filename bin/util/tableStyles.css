@@ -1,0 +1,5 @@
+.table-view .cell {
+    -fx-wrap-text: true; /* Permite que el texto dentro de la celda se envuelva */
+    -fx-cell-size: 70px; /* Establece la altura de la celda */
+   /* -fx-pref-width: 250px; /* Establece el ancho preferido del texto dentro de la celda */
+}

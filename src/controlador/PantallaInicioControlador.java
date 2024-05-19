@@ -3,6 +3,7 @@ package controlador;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import modelo.AccesoUsuario;
@@ -13,9 +14,9 @@ import javafx.stage.Window;
 public class PantallaInicioControlador {
 	@FXML
 	private TextField usuario_TxtField_pInicio;
-	
+			
 	@FXML
-	private TextField clave_TxtField_pInicio;
+	private PasswordField clave_passWField_pInicio;
 	
 	@FXML
 	private Button aceptar_button_pInicio;
@@ -58,8 +59,8 @@ public class PantallaInicioControlador {
 	
 	@FXML
     private void handleaceptar_button_pInicioAction() {
-        String usuario = usuario_TxtField_pInicio.getText();
-        String clave = clave_TxtField_pInicio.getText();
+        String usuario = usuario_TxtField_pInicio.getText();      
+         String clave = clave_passWField_pInicio.getText();
         Pantalla1AControlador pantalla1AControlador = new Pantalla1AControlador();
         Pantalla1Controlador pantalla1Controlador = new Pantalla1Controlador();
 
